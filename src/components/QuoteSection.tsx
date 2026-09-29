@@ -274,11 +274,7 @@ const QuoteSection = () => {
             className="mt-6 w-full rounded-full bg-amber-400 px-6 py-4 font-bold text-slate-950 transition hover:bg-amber-300"
           >
             Submit Quote Request
-          </button>
-
-          <p className="mt-4 text-center text-xs leading-5 text-slate-400">
-            Demo form — online submission will be connected when the backend is implemented.
-          </p>
+          </button>          
         </form>
       </div>
     </section>

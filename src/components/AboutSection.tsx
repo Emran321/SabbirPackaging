@@ -1,3 +1,4 @@
+import ownerPhoto from '../assets/images/owner.jpg'
 import {
   Package,
   Factory,
@@ -38,9 +39,30 @@ const AboutSection = () => {
       id="about"
       className="bg-slate-950 px-5 py-20 text-white sm:px-6 lg:py-28"
     >
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
+      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-start">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-400">
+          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+            <img
+              src={ownerPhoto}
+             alt="Alamgir Kabir, Founding Director of Sabbir Printing and Packaging"
+              className="h-[420px] w-full object-cover object-top"
+            />
+
+            <div className="border-t border-white/10 bg-white/[0.03] px-6 py-5">
+               <p className="text-xl font-bold text-white">
+    Alamgir Kabir
+  </p>
+              <p className="text-lg font-bold text-white">
+                Founding Director
+              </p>
+
+              <p className="mt-1 text-sm text-slate-400">
+                Sabbir Printing & Packaging
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.3em] text-amber-400">
             About Us
           </p>
 
@@ -62,7 +84,10 @@ const AboutSection = () => {
 
           <div className="mt-10 flex flex-wrap gap-6">
             <div>
-              <p className="text-3xl font-black text-amber-400">B2B</p>
+              <p className="text-3xl font-black text-amber-400">
+                B2B
+              </p>
+
               <p className="mt-1 text-sm text-slate-400">
                 Business focused
               </p>
@@ -71,7 +96,10 @@ const AboutSection = () => {
             <div className="h-12 w-px bg-white/10" />
 
             <div>
-              <p className="text-3xl font-black text-amber-400">Custom</p>
+              <p className="text-3xl font-black text-amber-400">
+                Custom
+              </p>
+
               <p className="mt-1 text-sm text-slate-400">
                 Made to requirement
               </p>
@@ -80,7 +108,10 @@ const AboutSection = () => {
             <div className="h-12 w-px bg-white/10" />
 
             <div>
-              <p className="text-3xl font-black text-amber-400">Quality</p>
+              <p className="text-3xl font-black text-amber-400">
+                Quality
+              </p>
+
               <p className="mt-1 text-sm text-slate-400">
                 Production focused
               </p>
