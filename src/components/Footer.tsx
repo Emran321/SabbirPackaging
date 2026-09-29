@@ -1,4 +1,4 @@
-import { Facebook, MapPin, Phone } from 'lucide-react'
+import { MessageCircle, MapPin, Phone } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -35,7 +35,7 @@ const Footer = () => {
               aria-label="Facebook"
               className="mt-6 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-slate-300 transition hover:border-amber-400 hover:text-amber-400"
             >
-              <Facebook size={20} />
+              <MessageCircle size={20} />
             </a>
           </div>
 
