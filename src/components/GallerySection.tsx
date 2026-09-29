@@ -11,37 +11,43 @@ const galleryItems = [
     category: 'Packaging Portfolio',
     image: gallery01,
     className:
-      'md:col-span-2 lg:col-span-7 lg:row-span-2 min-h-[420px] lg:min-h-[560px]',
+      'md:col-span-2 lg:col-span-7 min-h-[340px] lg:min-h-[420px]',
+    imageClassName: 'object-cover object-center',
   },
   {
     title: 'Product Packaging',
     category: 'Printed Box',
     image: gallery02,
-    className: 'lg:col-span-5 min-h-[260px]',
+    className: 'lg:col-span-5 min-h-[200px] lg:min-h-[200px]',
+    imageClassName: 'object-cover object-center',
   },
   {
     title: 'Branded Packaging',
     category: 'Custom Work',
     image: gallery03,
-    className: 'lg:col-span-5 min-h-[280px]',
+    className: 'lg:col-span-5 min-h-[200px] lg:min-h-[200px]',
+    imageClassName: 'object-cover object-center',
   },
   {
     title: 'Pizza Box Packaging',
     category: 'Food Packaging',
     image: gallery04,
-    className: 'lg:col-span-4 min-h-[280px]',
+    className: 'lg:col-span-4 min-h-[210px]',
+    imageClassName: 'object-cover object-center',
   },
   {
     title: 'Battery Packaging',
     category: 'Industrial Packaging',
     image: gallery05,
-    className: 'lg:col-span-4 min-h-[280px]',
+    className: 'lg:col-span-4 min-h-[210px]',
+    imageClassName: 'object-cover object-center',
   },
   {
     title: 'Custom Product Box',
     category: 'Printed Packaging',
     image: gallery06,
-    className: 'lg:col-span-4 min-h-[280px]',
+    className: 'lg:col-span-4 min-h-[210px]',
+    imageClassName: 'object-cover object-center',
   },
 ]
 
@@ -49,7 +55,7 @@ const GallerySection = () => {
   return (
     <section
       id="gallery"
-      className="bg-slate-950 px-5 py-20 text-white sm:px-6 lg:py-28"
+      className="scroll-mt-24 bg-slate-950 px-5 py-20 text-white sm:px-6 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -69,30 +75,30 @@ const GallerySection = () => {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-12">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-12">
           {galleryItems.map((item, index) => (
             <article
               key={item.title}
-              className={`group relative overflow-hidden rounded-[2rem] border border-white/10 ${item.className}`}
+              className={`group relative overflow-hidden rounded-[1.5rem] border border-white/10 ${item.className}`}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                className={`absolute inset-0 h-full w-full transition duration-700 group-hover:scale-[1.03] ${item.imageClassName}`}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/5" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/5" />
 
-              <div className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/30 text-sm font-bold backdrop-blur">
+              <div className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/35 text-xs font-bold backdrop-blur">
                 0{index + 1}
               </div>
 
-              <div className="relative flex h-full min-h-[inherit] flex-col justify-end p-7 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-300">
+              <div className="relative flex h-full min-h-[inherit] flex-col justify-end p-5 sm:p-6">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300">
                   {item.category}
                 </p>
 
-                <h3 className="mt-2 max-w-lg text-2xl font-bold sm:text-3xl">
+                <h3 className="mt-1.5 max-w-lg text-xl font-bold sm:text-2xl">
                   {item.title}
                 </h3>
               </div>
